@@ -1,0 +1,208 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Project.css">
+        <script src="project.js"></script>
+        
+        <title>Uptown public Library</title>
+    </head>
+
+    <body>
+
+ 
+  
+  <div id="nav-container">
+     <img src="img/lo2.png" id="nav-image">
+     <nav id="nav">
+         <a href="Projecthome.html" id="Projecthome.html">Home</a>
+         <a href="Registerproject.html" id="Registerproject.html">Registration</a>
+         <a href="Events.html" id="Events.html">Events</a>
+         <a href="collection.html" id="collection">Collection</a>
+         <a href="cafeteria.html" id="cafeteria">Cafeteria</a>
+         <a href="aboutus.html" id="about-us">About us</a>
+         <a href="Contactproject.html" id="Contactproject.html">Contact us</a>
+     </nav>
+ </div>
+ <div id="time-container"></div>
+
+<body>
+    <div id="header"></div>
+
+
+    <!-- category section ---------------------------------->
+    <h2 id="category-title">Category</h2>
+    <div id="scrollable-category-container">
+        <div id="category-container">
+            <div class="category-item" id="novel">
+                <div class="category-item-image-container">
+                    <img src="img/how-many-words-in-a-novel.webp">
+                </div>
+                <span class="category-item-title">Novel</span>
+            </div>
+
+            <div class="category-item" id="comic">
+                <div class="category-item-image-container">
+                    <img src="img/375_250-superhero_hovering_sky_thinkstockphotos_482621066_450x300.png">
+                </div>
+                <span class="category-item-title">Comic Book</span>
+            </div>
+
+            <div class="category-item" id="ebook">
+                <div class="category-item-image-container">
+                    <img src="img/istockphoto-940972538-612x612.jpg">
+                </div>
+                <span class="category-item-title">eBook</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- content section ------------------------------------>
+    <h2 id="content-category-title"></h2>
+    <p id="content-category-description"></p>
+
+    <div id="content-container"></div>
+
+
+    <script src="project.js"></script>
+
+    
+    <script>
+        let content_container = document.getElementById('content-container')
+        let content_category_title = document.getElementById('content-category-title')
+        let content_category_description = document.getElementById('content-category-description')
+
+        function clearOldContents() {
+            content_container.innerHTML = ''
+        }
+
+        function addNewContent(id, image_url, name) {
+            content_container.innerHTML += `
+                        <div class="content-item" id=${id}>
+                            <div class="content-item-image-container">
+                                <img src="${image_url}">
+                            </div>
+                            <span class="content-item-title">${name}</span>
+                            <span class="content-item-reserve-btn">reserve</span>
+                        </div>
+                    `
+        }
+
+        function setNewCategoryInfo(name, description) {
+            content_category_title.innerHTML = name
+            content_category_description.innerHTML = description
+        }
+
+        function activateReserveBtns() {
+            let all_reserve_btns = document.getElementsByClassName('content-item-reserve-btn')
+            for (reserve_btn of all_reserve_btns) {
+                reserve_btn.addEventListener('click', function (e) {
+                    if (this.innerHTML == 'reserve') {
+                        this.style.backgroundColor = 'red'
+                        this.innerHTML = 'cancel'
+                    }
+                    else {
+                        this.style.backgroundColor = 'gray'
+                        this.innerHTML = 'reserve'
+                    }
+                })
+            }
+        }
+
+
+
+        function clickedOnCategory(category_element) {
+            let category_id = category_element.id
+
+            clearOldContents()
+
+            setNewCategoryInfo(
+                categories_information[category_id].name,
+                categories_information[category_id].description
+            )
+
+            
+            let all_items_object = categories_database[category_id]
+
+            for (item of Object.values(all_items_object)) {
+                addNewContent(item.id, item.image_url, item.name)
+            }
+
+            activateReserveBtns()
+        }
+    </script>
+
+
+
+
+
+
+    
+    <script>
+        clickedOnCategory(
+            document.getElementById('novel')
+        )
+    </script>
+
+
+
+
+
+
+    
+    <script>
+        let all_categories = document.getElementsByClassName('category-item')
+
+      
+        for (category of all_categories) {
+            
+            category.addEventListener('click', function () {
+                clickedOnCategory(this)
+            })
+        }
+    </script>
+</body>
+
+<footer id="footer">
+    <div class="part-2">
+          <!-- info section -->
+          <section class="info_section layout_padding-top layout_padding2-bottom">
+            <div class="container">
+              <div class="social_container">
+                <h4>Follow Us</h4>
+                <div class="social_box">
+                  <a href="https://twitter.com/">
+                    <img src="img/twitter.png" alt="">
+                  </a>
+                  <a href="www.linkedin.com/in/">
+                    <img src="img/linkedin.png" alt="">
+                  </a>
+                    <a href="https://www.youtube.com/">
+                        <img src="img/youtube.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+    <!-- footer section -->
+          <section class="container-fluid footer_section">
+            <div class="container">
+                <p>
+                    <em>Copyright ©2020 Uptown Public Library <br>
+                      <a href="mailto:uptownlibrary@gmail.com">
+                       uptownlibrary@gmail.com</a></em>
+                  </p>
+            </div>
+          </section>
+          <!-- footer section -->
+    </div></footer>
+   
+
+</html>

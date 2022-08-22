@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Project.css">
+        <script src="project.js"></script>
+        
+        <title>Uptown public Library</title>
+    </head>
+
+  <div id="nav-container">
+     <img src="img/lo2.png" id="nav-image">
+     <nav id="nav">
+         <a href="Projecthome.html" id="Projecthome.html">Home</a>
+         <a href="Registerproject.html" id="Registerproject.html">Registration</a>
+         <a href="Events.html" id="Events.html">Events</a>
+         <a href="collection.html" id="collection">Collection</a>
+         <a href="cafeteria.html" id="cafeteria">Cafeteria</a>
+         <a href="aboutus.html" id="about-us">About us</a>
+         <a href="Contactproject.html" id="Contactproject.html">Contact us</a>
+     </nav>
+ </div>
+ <div id="time-container"></div>
+
+<body>
+    <header>
+        
+        <h1><center><img class="contact" src="img/contact.jpg" alt="contact" > </center></h1>
+    </header>
+   
+    <main>
+        <div> <center>
+            <!-- Contact Form -->
+            <div id="form-container">
+            <h1>Contact Us</h1>
+            <form name="contact" id="contact" class="form-submission" method="#" action="#">
+                <label for="fullName" class="form-submission-label">Name<span style="color: red;"> *</span></label>
+                <input type="text" name="fullName" id="fullName" class="form-submission-input" required="required" placeholder="">
+                <label for="email" class="form-submission-label">E-mail<span style="color: red;"> *</span></label>
+                <input type="text" name="email" id="email" class="form-submission-input" required="required" placeholder="project@vaniercollege.com">
+                <label for="phone" class="form-submission-label">Phone</label>
+                <input type="tel" name="phone" id="phone" class="form-submission-input" placeholder="5145555555">
+                <label for="comments" class="form-submission-label">Comments</label>
+                <textarea name="comments" id="comments" class="form-submission-input" rows="2" cols="20"
+                    placeholder="Please add your comments here..."></textarea>
+                <input type="submit" value="Send" class="form-submission-input">
+            </form>
+        </center>
+        </div>
+    </main>
+    
+    <!-- Contact Form Validation Function Call -->
+    <script>validateContactForm()</script>
+
+    <footer id="footer">
+        <div class="part-2">
+              <!-- info section -->
+              <section class="info_section layout_padding-top layout_padding2-bottom">
+                <div class="container">
+                  <div class="social_container">
+                    <h4>Follow Us</h4>
+                    <div class="social_box">
+                      <a href="https://twitter.com/">
+                        <img src="img/twitter.png" alt="">
+                      </a>
+                      <a href="www.linkedin.com/in/">
+                        <img src="img/linkedin.png" alt="">
+                      </a>
+                        <a href="https://www.youtube.com/">
+                            <img src="img/youtube.png" alt="">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+        <!-- footer section -->
+              <section class="container-fluid footer_section">
+                <div class="container">
+                    <p>
+                        <em>Copyright ©2020 Uptown Public Library <br>
+                          <a href="mailto:uptownlibrary@gmail.com">
+                           uptownlibrary@gmail.com</a></em>
+                      </p>
+                </div>
+              </section>
+              <!-- footer section -->
+        </div></footer>
+        
+</body>
+
+</html>

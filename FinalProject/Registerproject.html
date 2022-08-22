@@ -1,0 +1,100 @@
+
+
+<!-- This page is for registration of new members -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Project.css">
+        <script type="text/javascript" src="project.js"></script>
+        
+        <title>Uptown public Library</title>
+    </head>
+<body> 
+  <div id="nav-container">
+     <img src="img/lo2.png" id="nav-image">
+     <nav id="nav">
+         <a href="Projecthome.html" id="Projecthome.html">Home</a>
+         <a href="Registerproject.html" id="Registerproject.html">Registration</a>
+         <a href="Events.html" id="Events.html">Events</a>
+         <a href="collection.html" id="collection">Collection</a>
+         <a href="cafeteria.html" id="cafeteria">Cafeteria</a>
+         <a href="aboutus.html" id="about-us">About us</a>
+         <a href="Contactproject.html" id="Contactproject.html">Contact us</a>
+     </nav>
+ </div>
+ <div id="time-container"></div>
+
+    <main>
+        <div>
+            <!-- Registration Form -->
+            <h1>Register Now</h1>
+            <h3>You must be at least 12 years old to register.</h3>
+            <form name="register" id="register" class="form-submission" method="#" action="#">
+                <label for="fName" class="form-submission-label">First Name<span style="color: red;"> *</span></label>
+                <input type="text" name="fName" id="fName" class="form-submission-input" required="required" placeholder="">
+                <label for="lName" class="form-submission-label">Last Name<span style="color: red;"> *</span></label>
+                <input type="text" name="lName" id="lName" class="form-submission-input" required="required" placeholder="">
+                <label for="email" class="form-submission-label">E-mail<span style="color: red;"> *</span></label>
+                <input type="text" name="email" id="email" class="form-submission-input" required="required" placeholder="project@vaniercollege.com">
+                <label for="DOB" class="form-submission-label">Date of Birth<span style="color: red;"> *</span></label>
+                <input type="date" name="DOB" id="DOB" class="form-submission-input" required="required">
+                <label for="phone" class="form-submission-label">Phone</label>
+                <input type="tel" name="phone" id="phone" class="form-submission-input" placeholder="5145555555">
+                <label for="address" class="form-submission-label">Address</label>
+                <input type="text" name="Address" id="address" class="form-submission-input" >
+                <label for="membership" class="form-submission-label">Membership<span style="color: red;">*</span></label>
+                <select name="membership" id="membership" required="required">
+                    <option value="regular" selected="selected">Regular</option>
+                    <option value="student">Student</option>
+                    <option value="senior">Senior</option>
+                    <option value="premium">Premium</option>
+                </select>
+                <input type="submit" value="Register" class="form-submission-input">
+                <p id="output_message"></p>
+            </form><br><br>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="part-2">
+              <!-- info section -->
+              <section class="info_section layout_padding-top layout_padding2-bottom">
+                <div class="container">
+                  <div class="social_container">
+                    <h4>Follow Us</h4>
+                    <div class="social_box">
+                      <a href="https://twitter.com/">
+                        <img src="img/twitter.png" alt="">
+                      </a>
+                      <a href="www.linkedin.com/in/">
+                        <img src="img/linkedin.png" alt="">
+                      </a>
+                        <a href="https://www.youtube.com/">
+                            <img src="img/youtube.png" alt="">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+        <!-- footer section -->
+              <section class="container-fluid footer_section">
+                <div class="container">
+                    <p>
+                        <em>Copyright ©2020 Uptown Public Library <br>
+                          <a href="mailto:uptownlibrary@gmail.com">
+                           uptownlibrary@gmail.com</a></em>
+                      </p>
+                </div>
+              </section>
+              <!-- footer section -->
+        </div></footer>
+       
+    <!-- Registration Form Validation Function Call -->
+    <script>validateRegisterForm()</script>
+</body>
+
+</html>

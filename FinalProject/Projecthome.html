@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html>
+<html>
+   <body>
+      <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="Project.css">
+         <script src="project.js"></script>
+         
+         <title>Uptown public Library</title>
+     </head>
+
+   
+   
+   <div id="nav-container">
+      <img src="img/lo2.png" id="nav-image">
+      <nav id="nav">
+          <a href="Projecthome.html" id="Projecthome.html">Home</a>
+          <a href="Registerproject.html" id="Registerproject.html">Registration</a>
+          <a href="Events.html" id="Events.html">Events</a>
+          <a href="collection.html" id="collection">Collection</a>
+          <a href="cafeteria.html" id="cafeteria">Cafeteria</a>
+          <a href="aboutus.html" id="about-us">About us</a>
+          <a href="Contactproject.html" id="Contactproject.html">Contact us</a>
+      </nav>
+  </div>
+  <div id="time-container"></div>
+
+  <h1 style="text-align: center; font-size: 50px;margin: 30px;"> Uptown Public Library</h1>
+
+  <video width="1800" height="750" controls autoplay>
+     <source src="video/libraryvideo.mp4" type="video/mp4">
+     <source src="video/libraryvideo.ogg" type="video/ogg">
+   Your browser does not support the video tag.
+   </video>
+
+   <main> 
+
+      <div class="wrapper">
+         <!-- Registration Form -->
+         <h1>Register Now</h1>
+         <h3>You must be at least 12 years old to register.</h3>
+         <form name="register" id="register" method="#" action="#">
+             <label for="fName">First Name<span style="color: red;"> *</span></label>
+             <input type="text" name="fName" id="fName" required="required" placeholder="">
+             <label for="lName">Last Name<span style="color: red;"> *</span></label>
+             <input type="text" name="lName" id="lName" required="required" placeholder="">
+             <label for="email">E-mail<span style="color: red;"> *</span></label>
+             <input type="text" name="email" id="email" required="required" placeholder="project@vaniercollege.com">
+             <label for="DOB">Date of Birth<span style="color: red;"> *</span></label>
+             <input type="date" name="DOB" id="DOB" required="required">
+             <label for="phone">Phone</label>
+             <input type="tel" name="phone" id="phone" placeholder="">
+             <label for="address">Address</label>
+             <input type="text" name="Address" id="address">
+             <label for="membership">Membership<span style="color: red;">*</span></label>
+             <select name="membership" id="membership" required="required">
+                 <option value="regular" selected="selected">Regular</option>
+                 <option value="student">Student</option>
+                 <option value="senior">Senior</option>
+                 <option value="premium">Premium</option>
+             </select>
+
+             <input type="submit" value="Register">
+             <p id="output_message"></p>
+         </form><br><br>
+     </div>
+      
+     <section class="slideshow">
+      <div class="slideshow-container slide">
+          <img src="img/Event1.jpeg" />
+          <img src="img/Event2.jpeg" />
+          <img src="img/Event3.jpeg" />
+          <img src="img/Event4.jpeg" />
+          <img src="img/Event5.jpeg" />
+          <img src="img/Event6.jpeg" />
+          <img src="img/Event7.jpeg" />
+          <img src="img/Event8.jpeg" />
+      </div>
+  </section>
+
+  <!-- category section ---------------------------------->
+  
+  <h2>
+  <a  href="collection.html" id="category-title" class ="home1">Check out our Collection </a>
+</h2>
+  <div id="scrollable-category-container">
+      <div id="category-container">
+          <div class="category-item" id="novel">
+              <div class="category-item-image-container">
+                  <img src="img/how-many-words-in-a-novel.webp">
+              </div>
+              <span class="category-item-title">Novel</span>
+          </div>
+         
+          <div class="category-item" id="comic">
+              <div class="category-item-image-container">
+                  <img src="img/375_250-superhero_hovering_sky_thinkstockphotos_482621066_450x300.png">
+              </div>
+              <span class="category-item-title">Comic Book</span>
+          </div>
+
+          <div class="category-item" id="ebook">
+              <div class="category-item-image-container">
+                  <img src="img/istockphoto-940972538-612x612.jpg">
+              </div>
+              <span class="category-item-title">eBook</span>
+          </div>
+      </div>
+  </div>
+
+
+  <h3 style="text-align: center; font-size: 30px; font-family: Arial, Helvetica, sans-serif; margin: 20px;">Find us on Google Map!</h3>
+
+  <p style="text-align: center;"><iframe src=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.960206763938!2d-87.65639538431655!3d41.95818976837697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3cbc8ad88a7%3A0xce30276ec252a74a!2sUptown%20Branch%2C%20Chicago%20Public%20Library!5e0!3m2!1sen!2sca!4v1651508737862!5m2!1sen!2sca" width="800" height="600" style="border:0;" allowfullscreen  referrerpolicy="no-referrer-when-downgrade" ></iframe></p>
+
+
+      <footer id="footer">
+         <div class="part-2">
+               <!-- info section -->
+               <section class="info_section layout_padding-top layout_padding2-bottom">
+                 <div class="container">
+                   <div class="social_container">
+                     <h4>Follow Us</h4>
+                     <div class="social_box">
+                       <a href="https://twitter.com/">
+                         <img src="img/twitter.png" alt="">
+                       </a>
+                       <a href="www.linkedin.com/in/">
+                         <img src="img/linkedin.png" alt="">
+                       </a>
+                         <a href="https://www.youtube.com/">
+                             <img src="img/youtube.png" alt="">
+                       </a>
+                     </div>
+                   </div>
+                 </div>
+               </section>
+         <!-- footer section -->
+               <section class="container-fluid footer_section">
+                 <div class="container">
+                  <p>
+                     <em>Copyright ©2020 Uptown Public Library <br>
+                       <a href="mailto:uptownlibrary@gmail.com">
+                        uptownlibrary@gmail.com</a></em>
+                   </p>
+                 </div>
+               </section>
+               <!-- footer section -->
+         </div></footer>
+         
+
+
+      
+      <main/> 
+      <body/> 
